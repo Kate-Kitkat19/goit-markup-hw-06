@@ -824,7 +824,7 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  outline: 1px solid transparent;
+  /* outline: 1px solid transparent; */
 }
 
 .form-input:focus,
@@ -844,6 +844,7 @@ ul {
 .form-phone,
 .form-email {
   margin-bottom: 10px;
+  outline: 1px solid green;
 }
 
 .input-icon {
@@ -862,16 +863,18 @@ ul {
 }
 
 .form-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
   color: var(--text-color-secondary);
   letter-spacing: 0.01em;
+  outline: 1px solid red;
 }
 
 .form-comment {
   margin-bottom: 20px;
+  outline: 1px solid green;
 }
 
 .comment {
@@ -894,6 +897,7 @@ ul {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  outline: 1px solid green;
 }
 
 .form-policy .checkbox-original {
