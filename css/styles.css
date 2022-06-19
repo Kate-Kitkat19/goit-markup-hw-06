@@ -525,12 +525,13 @@ ul {
 .footer-icons .soc-link:focus {
   background-color: var(--accent-color);
 }
-.subscribe-form {
-  position: relative;
-}
 
 .subscription {
   margin-left: auto;
+}
+
+.subscribe-form {
+  position: relative;
 }
 
 .form-email-input {
@@ -544,7 +545,6 @@ ul {
   border-radius: 4px;
   font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -582,7 +582,6 @@ ul {
 .form-email-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -772,7 +771,6 @@ ul {
   padding-right: 40px;
   padding-left: 40px;
   padding-bottom: 40px;
-
   background-color: var(--bcg-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -815,7 +813,6 @@ ul {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .form-input {
@@ -824,7 +821,8 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  /* outline: 1px solid transparent; */
+  outline: 1px solid transparent;
+  transition: border-color 250ms var(--typical-timing-function);
 }
 
 .form-input:focus,
@@ -844,7 +842,6 @@ ul {
 .form-phone,
 .form-email {
   margin-bottom: 10px;
-  outline: 1px solid green;
 }
 
 .input-icon {
@@ -856,6 +853,7 @@ ul {
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
+  transition: color 250ms var(--typical-timing-function);
 }
 
 .form-input:focus + .icon {
@@ -869,15 +867,14 @@ ul {
   line-height: 1.16;
   color: var(--text-color-secondary);
   letter-spacing: 0.01em;
-  outline: 1px solid red;
 }
 
 .form-comment {
   margin-bottom: 20px;
-  outline: 1px solid green;
 }
 
 .comment {
+  display: block;
   resize: none;
   width: 100%;
   height: 120px;
@@ -885,6 +882,7 @@ ul {
   border-radius: 4px;
   padding: 12px 16px;
   outline: 1px solid transparent;
+  transition: border-color 250ms var(--typical-timing-function);
 }
 
 .comment::placeholder {
@@ -897,7 +895,6 @@ ul {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  outline: 1px solid green;
 }
 
 .form-policy .checkbox-original {
@@ -922,16 +919,25 @@ ul {
   margin-right: 9px;
   border: 1.8px solid var(--main-text-color);
   border-radius: 2px;
-  color: var(--bcg-color);
+  transition: border-color 250ms var(--typical-timing-function),
+    background-color 250ms var(--typical-timing-function);
 }
 
 .icon-checked {
-  fill: currentColor;
+  fill: transparent;
+  transition: fill 250ms var(--typical-timing-function);
 }
 
 .checkbox-original:checked + .custom-chechbox {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+}
+.checkbox-original:focus + .custom-chechbox {
+  border-color: var(--accent-color);
+}
+
+.checkbox-original:checked + .custom-chechbox .icon-checked {
+  fill: var(--bcg-color);
 }
 
 .policy-text {
